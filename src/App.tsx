@@ -1,10 +1,12 @@
+import { Navigate, Route, Routes } from 'react-router-dom'
+import Login from './components/login/Login'
+
 function App() {
   return (
-    <main className="min-h-screen bg-slate-950 flex items-center justify-center">
-      <h1 className="text-5xl font-bold text-white">
-        Desserts
-      </h1>
-    </main>
+    <Routes>
+      <Route path="/login" element={<Login />} />
+      <Route path="/" element={<Navigate to="/login" replace />} />
+    </Routes>
   )
 }
 
